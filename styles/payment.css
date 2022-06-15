@@ -4,3 +4,22 @@
     height: 500px;
     width: 500px;
 }
+.hotelImgDes
+{
+    background-color: rgb(132,136,139);
+    width: 50%;
+    height: 20%;
+    margin: 2% auto;
+    position: relative;
+}
+.customerInfo
+{
+    margin: 2%;
+}
+.tariffDetails
+{
+    margin:2%;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 1% 2%;
+}
