@@ -1,9 +1,15 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+
 body
 {
     height: 100%;
     width: 100%;
     margin:0;
     background-color: #e0e0e0;
+   
 }
 .container
 {
@@ -14,17 +20,53 @@ body
 {
     height: 60px;
     width: 60px;
+    margin: auto;
 }
 .socialImg
 {
     height:20px;
     width: 22px;
+    float:right;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 header
 {
     background-color: rosybrown;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;    
+    z-index: 1;
+   
 }
 footer
 {
     background-color: rosybrown;
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;  
+    z-index: 1;
+   
+}
+
+a[href="login.html"]
+{
+    float:right;
+    margin-right: 20px;
+    padding-top: 20px;
+    text-decoration: none;
+}
+a[href="contact.html"]
+{
+    float:left;
+    text-decoration: none;   
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.copyright
+{
+    margin-left:572px;
+    font-size: 10px;
 }

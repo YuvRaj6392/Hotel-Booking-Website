@@ -23,3 +23,15 @@
     border-radius: 5px;
     padding: 1% 2%;
 }
+#paynow
+{
+    text-decoration: none;
+    margin-left: 15px;
+}
+#index-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }

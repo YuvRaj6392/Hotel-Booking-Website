@@ -7,9 +7,64 @@
 #list-view
 {
     margin: 2%;
+   display: flex; 
+   flex-wrap: wrap;
 }
 .imageContainer
 {
     background-color:rgb(132,136,139);
     width: 40%;
+    margin: 40px;
+    
 }
+#map-view
+{
+    display: none;
+}
+li
+{
+    list-style: none;
+    
+}
+ul
+{
+    display: flex;
+    text-decoration: none;
+  
+}
+a
+{
+    text-decoration: none;
+}
+#listview
+{
+    margin-left:493px;
+    margin-right:30px;
+}
+
+  #ul-tab {
+    justify-content: center;
+  }
+  #ul-tab {
+    padding-top: 5%;
+  }
+  li
+  {
+    margin:5px;
+   
+  }
+  a[href="#list-view"]
+  {
+    font-weight: bolder;
+  }
+  a[href="#map-view"]
+  {
+    font-weight: bolder;
+  }
+  #list-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }

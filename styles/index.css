@@ -14,6 +14,7 @@
     background-position: center;
     background-size: cover;
 
+
 }
 .cityCards
 {
@@ -31,4 +32,23 @@
 .city-card-and-name-inner
 {
     position: relative;
+}
+input
+{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    border:2px solid #f1f1f1;
+    padding: 5px;
+    border-radius:12px;
+    margin-bottom: 30px;
+}
+.viewmore
+{
+    margin-bottom:7%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
