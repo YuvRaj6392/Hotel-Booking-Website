@@ -12,9 +12,11 @@
 }
 .imageContainer
 {
-    background-color:rgb(132,136,139);
+    background-color:lightgrey;
     width: 40%;
     margin: 40px;
+ display: flex;
+
     
 }
 #map-view
@@ -67,4 +69,8 @@ a
     width: 100%;
     margin-top: 6%;
     margin-bottom: 6%;
+  }
+  .hotelImageMargin
+  {
+    margin-right:10px;
   }
