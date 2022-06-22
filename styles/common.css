@@ -85,3 +85,8 @@ header
     order:3;
     margin-right: 2%;
 }
+#sign-in-button
+{
+    padding-top: 2px;
+    margin: 15px;
+}

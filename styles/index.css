@@ -13,6 +13,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width:1267px;
+    margin-left:-73px;
 
 
 }
@@ -33,7 +35,7 @@
 {
     position: relative;
 }
-input
+/* input
 {
     position: absolute;
     top: 38%;
@@ -44,13 +46,15 @@ input
     padding: 5px;
     border-radius:12px;
     margin-bottom: 30px;
-}
+} */
 .viewmore
 {
     margin-bottom:7%;
     display: flex;
     justify-content: center;
     text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 .content
 {

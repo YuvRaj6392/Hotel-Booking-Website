@@ -19,9 +19,9 @@
 
     
 }
-#map-view
+.imageContainer:hover
 {
-    display: none;
+  background-color: rosybrown;
 }
 li
 {
@@ -74,3 +74,4 @@ a
   {
     margin-right:10px;
   }
+  

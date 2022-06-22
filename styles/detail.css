@@ -2,17 +2,26 @@
 {
     height: 300px;
     width: 500px;
-    margin-top: 40px;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-top: 20px;
+
+  
+
     
+}
+.hotelDetailingImg
+{
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+ 
+  width:650px;
 }
 .paymentDetails
 {
-    margin-right: 4%;
-    margin-left:2%;
-    margin-bottom: 4%;
+    
     height: 200px;
+  
+  
 }
 .hotelDescription
 {
@@ -32,7 +41,7 @@
   
   {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border: 1px solid black;
     margin-left: 5%;
     margin-right: 5%;
@@ -57,4 +66,8 @@
 p,h5
 {
     font-family: cursive;
+}
+.book:hover
+{
+background-color:greenyellow;
 }
