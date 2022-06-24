@@ -4,89 +4,87 @@
     text-decoration: none;
 }
 
-body
-{
+body {
     height: 100%;
     width: 100%;
-    margin:0;
+    margin: 0;
     background-color: #e0e0e0;
-   
+
 }
-.container
-{
+
+.container {
     height: 100%;
     width: 100%;
 }
-.logo
-{
+
+.logo {
     height: 60px;
     width: 60px;
     margin-left: 15px;
 
 }
-.socialImg
-{
-    height:20px;
+
+.socialImg {
+    height: 20px;
     width: 22px;
- 
+
 }
-header
-{
+
+header {
     background-color: rosybrown;
     position: fixed;
     top: 0;
-    left:0;
-    right:0;    
+    left: 0;
+    right: 0;
     z-index: 1;
-   
+
 }
-footer
-{
+
+footer {
     background-color: rosybrown;
     position: fixed;
-    bottom:0;
-    left:0;
-    right:0;  
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     padding: 0.8%;
     align-items: center;
-   
+
 }
 
-a[href="login.html"]
-{
-   
+a[href="login.html"] {
+
     padding-top: 20px;
     text-decoration: none;
     margin-right: 2%;
 }
-a[href="contact.html"]
-{
 
-    text-decoration: none;   
+a[href="contact.html"] {
+
+    text-decoration: none;
     margin-left: 2%;
 }
-.copyright
-{
+
+.copyright {
 
     font-size: 10px;
     margin: auto;
-    
+
 }
-header
-{
+
+header {
     display: flex;
     justify-content: space-between;
 }
-.socialImage
-{
-    order:3;
+
+.socialImage {
+    order: 3;
     margin-right: 2%;
 }
-#sign-in-button
-{
+
+#sign-in-button {
     padding-top: 2px;
     margin: 15px;
 }

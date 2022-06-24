@@ -1,32 +1,31 @@
-
-.hotelPaymentImg
-{
+.hotelPaymentImg {
     height: 300px;
     width: 270px;
 }
-.hotelImgDes
-{
-    background-color: rgb(132,136,139);
+
+.hotelImgDes {
+    background-color: rgb(132, 136, 139);
     width: 50%;
     height: 20%;
     margin: 2% auto;
     position: relative;
     display: flex;
 }
-.customerInfo
-{
+
+.customerInfo {
     margin: 2%;
 }
-.tariffDetails
-{
-    margin:2%;
+
+.tariffDetails {
+    margin: 2%;
     border-radius: 5px;
     padding: 1% 2%;
 }
-#paynow
-{
+
+#paynow {
     text-decoration: none;
 }
+
 #index-container {
     position: relative;
     height: 100%;
@@ -35,19 +34,19 @@
     margin-bottom: 6%;
     display: flex;
     flex-direction: column;
-  }
-  .otherDetails
-  {
+}
+
+.otherDetails {
     display: flex;
     justify-content: space-evenly;
     background-color: rosybrown;
-    border:1px solid black;
+    border: 1px solid black;
     margin-left: 2%;
     margin-right: 2%;
-  }
-  #paynow
-  {
+}
+
+#paynow {
 
     display: flex;
     margin-top: 80px;
-  }
+}

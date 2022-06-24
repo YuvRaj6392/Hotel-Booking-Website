@@ -1,77 +1,76 @@
-.hotelDetailImg
-{
-    height: 300px;
-    width: 500px;
-    margin-top: 20px;
+.hotelDetailImg {
+  height: 300px;
+  width: 500px;
+  margin-top: 20px;
 
-  
 
-    
+
+
 }
-.hotelDetailingImg
-{
+
+.hotelDetailingImg {
   justify-content: center;
   align-items: center;
-  margin-top:25px;
- 
-  width:650px;
+  margin-top: 25px;
+
+  width: 650px;
 }
-.paymentDetails
-{
-    
-    height: 200px;
-  
-  
+
+.paymentDetails {
+
+  height: 200px;
+
+
 }
-.hotelDescription
-{
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: 1%;
-    margin-bottom:2%
+
+.hotelDescription {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom: 2%
 }
+
 #index-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin-top: 6%;
-    margin-bottom: 6%;
-  }
-  .detailingFlex
-  
-  {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    margin-left: 5%;
-    margin-right: 5%;
-    flex-wrap: wrap;
-    height: 400px;
-
-  }
-
-  .info
-  {
-    margin-bottom: 15px;
-    margin-top: 2px   
-  }
-  input[type="number"]
-  {
-    margin-top: 10px;
-  }
-  .inner
-  {
-    width: 60%;
-  }
-p,h5
-{
-    font-family: cursive;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
-.book:hover
-{
-background-color:greenyellow;
+
+.detailingFlex {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-wrap: wrap;
+  height: 400px;
+
 }
-.checked
-{
-  color:orange;
+
+.info {
+  margin-bottom: 15px;
+  margin-top: 2px
+}
+
+input[type="number"] {
+  margin-top: 10px;
+}
+
+.inner {
+  width: 60%;
+}
+
+p,
+h5 {
+  font-family: cursive;
+}
+
+.book:hover {
+  background-color: greenyellow;
+}
+
+.checked {
+  color: orange;
 }
