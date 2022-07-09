@@ -18,22 +18,14 @@
 
 <body>
   <div>
+
     <!-- Header starts here -->
-
-    <header>
-      <div>
-        <a href="index.html"><img src="assests/images/logo.png" alt="" height="50px" width="80px"></a>
-      </div>
-      <div>
-        <button type="button" class="btn btn-primary btn-sm" style="margin-right:15px" data-bs-toggle="modal"
-          data-bs-target="#loginModal">Login</button>
-      </div>
-
- 
+    <header id="head">
     </header>
     <!-- header ends here -->
-     <!-- Login Modal Starts Here       -->
 
+
+     <!-- Login Modal Starts Here       -->
      <div id="loginModal" class="modal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -47,7 +39,7 @@
               <input type="text" placeholder="Username" name="username" id="username" required>
               <br><br>
               <label for="">Password:</label>&nbsp;
-              <input type="password" placeholder="Password" name="password" id="password" required>
+              <input type="password" placeholder="Password" name="password" id="password" autocomplete="off" required>
               <div class="modal-footer">
 
                 <button type="submit" class="btn btn-primary">Login</button>
@@ -65,7 +57,7 @@
 <section>
     <div id="topContent">
         <div>
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel " data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="First slide " height="400px" width="400px">
@@ -91,29 +83,29 @@
           <form action="payment.html" method="get">
             <div class="info">
               <label for="adults">Adults:</label>
-              <input class="inner" type="number" name="adult" id="adult" min="1" required
+              <input class="inner" type="number" name="adult" id="adult" min="1" oninput="update()" required
                 style="margin-left:20px;margin-bottom: 20px;"><br>
             </div>
             <div class="info">
               <label for="name">Name:</label>
               <input class="inner" type="text" name="name" id="name" required autocomplete="off"
-                style="margin-left:24px;margin-bottom: 20px;"><br>
+                style="margin-left:24px;margin-bottom: 20px;" oninput="update()"><br>
             </div>
             <div class="info">
               <label for="fromDate">From:</label>
-              <input class="inner" type="date" name="date" id="date" required
+              <input class="inner" type="date" name="date" id="fromDate" oninput="update()" required
                 style="margin-left:30px;margin-bottom: 20px;"><br>
             </div>
             <div class="info">
               <label for="toDate">To:</label>
 
-              <input class="inner" type="date" name="date" id="date" required
+              <input class="inner" type="date" name="date" id="toDate" oninput="update()" required
                 style="margin-left:50px;margin-bottom: 20px;"><br>
             </div>
             <div class="info">
               <label for="total">Total:</label>
-              <input class="inner" type="text" name="total" id="total" disabled
-                style="margin-left:30px;margin-bottom: 10px;"><br>
+              <input class="inner" type="text" name="total" id="price" oninput="update()" disabled
+                style="margin-left:30px;margin-bottom: 10px;" ><br>
             </div>
             <input type="submit" value="Book Now" class="btn btn-outline-success btn-sm book" style="margin-left:74px">
           </form>
@@ -156,28 +148,11 @@
 
 
     <!-- footer starts here -->
-    <footer>
-
-        <div>
-          <button type="button" class="btn btn-primary btn-sm" style="margin-left:15px;margin-right:8px"
-            data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
-        </div>
-        <div>
-          <p style="margin-top:8px; margin-right:5px;">&#169; 2022 Room Search Pvt. Ltd.</p>
-        </div>
-        <div>
-          <span>
-            <img class="socialMedia"   src="assests/images/facebook.png" alt="" height="20px" width="20px">
-            <img  class="socialMedia" src="assests/images/instagram.png" alt="" height="20px" width="20px">
-            <img class="socialMedia"  src="assests/images/twitter.png" alt="" height="30px" width="30px" style="margin-right:5px;">
-           </span>
-        </div>
-  
-      
-  
+    <footer id="foot">
       </footer>
-  
-      <!-- footer ends here  -->
+  <!-- footer ends here  -->
+
+
         <!-- Contact US MODAL starts Here -->
   
         <div id="contactModal" class="modal" tabindex="-1">
@@ -206,6 +181,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"></script>
+      <script src="scripts/common.js"></script>
+      <script src="scripts/detail.js"></script>
   </body>
   
   </html>
