@@ -21,37 +21,68 @@ let output=`
 </div>
 <div>
 `
+enableLoader();
 document.getElementById("container2").innerHTML=output;
 let query=sessionStorage.getItem("cityName");
 let hotelLocationId=sessionStorage.getItem("hotelLocationId");
+var paymentCityId="";
 const xhr=new XMLHttpRequest();
       let url="https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query="+query;
   
       xhr.open("GET",url);
-      xhr.setRequestHeader("X-RapidAPI-Key", "b770b38b95mshbc0af9af8d6af01p13576cjsn93f0b6b72802");
+      xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{
   if(xhr.readyState==4 && xhr.status==200)
   {
-    let resStr=xhr.responseText;
-   
+    let resStr=xhr.responseText;  
    let resObj=JSON.parse(resStr);
-   for(let i=0;i<resObj.data.length;i++)
-   {
-    let user=resObj.data[i].location_id;
-    if(user==hotelLocationId){
-        let photo=resObj.data[i].photo.images.original.url;
-        let output=`
-        <img src="${photo}" height="300px" width="350px" alt="">
-        `
-        document.getElementById("insideContainer1").innerHTML=output;
-
-    }
-   }
+   paymentCityId=resObj.data.Typeahead_autocomplete.results[0].detailsV2.locationId;
+populateImageOnPayment();
    
-  
-
+   }
   }    
+  function populateImageOnPayment(){
+    let xhr=new XMLHttpRequest()
+    xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+paymentCityId);
+xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
+xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
+xhr.send();
+xhr.onreadystatechange=()=>{
+  if(xhr.readyState==4 && xhr.status==200)
+  {
   
+    let resStr=xhr.responseText;  
+    let resObj=JSON.parse(resStr);
+    let urlLocationId=sessionStorage.getItem("hotelLocationId");
+    for(let i=0;i<resObj.data.length;i++)
+    {
+      let checkInfo=resObj.data[i].location_id;
+      if(checkInfo==urlLocationId)
+      {
+        let imageUsedInThis=resObj.data[i].photo.images.original.url;
+        let hotelNamePayment=resObj.data[i].name;
+        let localAddress=resObj.data[i].address;
+        let output=`
+        <img src="${imageUsedInThis}" height="300px" width="350px" alt="">
+        `
+        let output2=`
+       <span> ${hotelNamePayment}<span>
+        `
+        let output3=`
+        <span>${localAddress}</span>
+      `
+        document.getElementById("insideContainer1").innerHTML=output;
+        document.getElementById("hotelNamePayment").innerHTML=output2;
+        document.getElementById("hotelAddressPayment").innerHTML=output3;
+        disableLoader();
+      }
+    }
+    
   }
+}
+
+  }
+  
+  

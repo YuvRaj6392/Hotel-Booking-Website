@@ -12,11 +12,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/common.css">
   <link rel="stylesheet" href="styles/detail.css  ">
+  <link rel="stylesheet" href="styles/loader.css  ">
 </head>
 <style>
 </style>
 
 <body>
+  <div id="loader">
+     
+  </div>
   <div>
 
     <!-- Header starts here -->
@@ -169,96 +173,6 @@
       crossorigin="anonymous"></script>
       <script src="scripts/common.js"></script>
       <script src="scripts/detail.js"></script>
-      <script>
-        window.addEventListener('load',getHotelId);
-function getHotelId(){
-    var link=window.location.href;
-    var data=link.split("=");
-    var query=data[1];
-    sessionStorage.setItem("hotelLocationId",query)
-  
-    let counter=0;
-   let xhr=new XMLHttpRequest();
-   xhr.open("GET", "https://travel-advisor.p.rapidapi.com/photos/list?location_id="+query);
-xhr.setRequestHeader("X-RapidAPI-Key", "b770b38b95mshbc0af9af8d6af01p13576cjsn93f0b6b72802");
-xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-
-xhr.send();
-xhr.onreadystatechange=()=>{
-    if(xhr.readyState==4 && xhr.status==200){
-        let resStr=xhr.responseText;
-    let resObj=JSON.parse(resStr);
-    for(let i=0;i<resObj.data.length;i++)
-    {
-      let image=resObj.data[i].images.original.url;
-      if(i==0)
-      {
-        let output=`
-    <div class="carousel-item active">
-                <img class="d-block w-100" src="${image}" height="400px" width="400px">
-              </div>
-   
-       `
-    document.getElementById("carousel-inner").innerHTML=output;
-      }
-    let output=`
-    <div class="carousel-item">
-                <img class="d-block w-100" src="${image}" height="400px" width="400px">
-              </div>
-   
-       `
-    document.getElementById("carousel-inner").innerHTML+=output;
-    }
-    
-    }
-}
-getResult();
-}
-var counter=0;
-var hotelName;
-var hotelDescription;
-function getResult(){
-  var cityLocationId=sessionStorage.getItem("cityLocationId");
-  var hotelLocationId=sessionStorage.getItem("hotelLocationId");
-  let xhr=new XMLHttpRequest();
-  xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+cityLocationId);
-xhr.setRequestHeader("X-RapidAPI-Key", "b770b38b95mshbc0af9af8d6af01p13576cjsn93f0b6b72802");
-xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-xhr.send();
-xhr.onreadystatechange=()=>{
-  if(xhr.readyState==4 && xhr.status==200)
-  {
-    let resStr=xhr.responseText;
-    let resObj=JSON.parse(resStr);
-    for(let i=0;i<resObj.data.length;i++)
-    {
-     let user=resObj.data[i].location_id;
-     if(user==hotelLocationId)
-     {
-       hotelsName=resObj.data[i].name;
-       hotelDescription=resObj.data[i].description;
-      let output=`
-      <p>
-        ${hotelDescription}
-      </p>
-
-
-      `
-      let outputyes=`
-      ${hotelsName}
-      `
-      document.getElementById("desc").innerHTML=output;
-      document.getElementById("hotelNameInDetail").innerHTML=outputyes;
-     }
-    }
- 
-  }
-}
-}
-var adult=document.getElementById("adult").value
-sessionStorage.setItem("adult",adult);
-
-      </script>
   </body>
   
   </html>

@@ -3,16 +3,15 @@ let cityName=""
 window.addEventListener('load',getUrl);
 function getUrl()
 {
+  enableLoader();
     var link = window.location.href
-
 var data=link.split("=");
 var query=data[1];
 sessionStorage.setItem("cityName",query);
 const xhr=new XMLHttpRequest();
       let url="https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query="+query;
-  
-      xhr.open("GET",url);
-      xhr.setRequestHeader("X-RapidAPI-Key", "b770b38b95mshbc0af9af8d6af01p13576cjsn93f0b6b72802");
+    xhr.open("GET",url);
+      xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{
@@ -34,9 +33,9 @@ xhr.onreadystatechange=()=>{
 var hotelLocationId="";
 function getHotelImages()
 {
-  const xhr=new XMLHttpRequest();
-  xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+locationId+"&adults=1&rooms=1&nights=2&offset=0&currency=USD&order=asc");
-xhr.setRequestHeader("X-RapidAPI-Key", "b770b38b95mshbc0af9af8d6af01p13576cjsn93f0b6b72802");
+  let xhr=new XMLHttpRequest();
+  xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+locationId);
+xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{
@@ -74,6 +73,7 @@ xhr.onreadystatechange=()=>{
         
         `;
         document.getElementById("insideContentBox").innerHTML+=output;
+        disableLoader();
     }
     
    }

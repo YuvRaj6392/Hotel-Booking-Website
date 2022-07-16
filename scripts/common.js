@@ -1,3 +1,14 @@
+//Here we will be enabling and disabling the loader
+function enableLoader(){
+  document.getElementById("loader").style.visibility="visible";
+  document.getElementsByTagName("body")[0].style.visibility="hidden";
+}
+function disableLoader(){
+  document.getElementById("loader").style.visibility="hidden";
+  document.getElementsByTagName("body")[0].style.visibility="visible";
+}
+
+
 
 //code for header starts here
 let header=` <header>
