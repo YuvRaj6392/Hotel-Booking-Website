@@ -38,6 +38,11 @@
 {
     margin-bottom: 10px;
 }
+#insideContentBox
+{
+    display: flex;
+    flex-wrap: wrap;
+}
 @media screen and (max-width:576px) {
     .views
     {

@@ -61,6 +61,7 @@
   align-items: center;
   border-radius: 10%;
   color: black;
+  cursor: pointer;
   
 }
 .insideImageCards:hover .overlay
