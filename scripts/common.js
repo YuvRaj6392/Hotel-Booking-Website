@@ -1,11 +1,11 @@
 //Here we will be enabling and disabling the loader
 function enableLoader(){
   document.getElementById("loader").style.visibility="visible";
-  document.getElementsByTagName("body")[0].style.visibility="hidden";
+  document.getElementsByTagName("body")[0].style.opacity="0.5";
 }
 function disableLoader(){
   document.getElementById("loader").style.visibility="hidden";
-  document.getElementsByTagName("body")[0].style.visibility="visible";
+  document.getElementsByTagName("body")[0].style.opacity="1";
 }
 
 

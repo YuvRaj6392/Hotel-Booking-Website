@@ -30,7 +30,7 @@ const xhr=new XMLHttpRequest();
       let url="https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query="+query;
   
       xhr.open("GET",url);
-      xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
+      xhr.setRequestHeader("X-RapidAPI-Key", "API_KEY");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{
@@ -46,7 +46,7 @@ populateImageOnPayment();
   function populateImageOnPayment(){
     let xhr=new XMLHttpRequest()
     xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+paymentCityId);
-xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
+xhr.setRequestHeader("X-RapidAPI-Key", "API_KEY");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{

@@ -1,4 +1,3 @@
-
 document.getElementById("five").style.display="none";
 document.getElementById("six").style.display="none";
 document.getElementById("seven").style.display="none";

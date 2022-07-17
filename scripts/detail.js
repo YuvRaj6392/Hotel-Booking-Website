@@ -36,7 +36,7 @@ function getHotelId(){
     let counter=0;
    let xhr=new XMLHttpRequest();
    xhr.open("GET", "https://travel-advisor.p.rapidapi.com/photos/list?location_id="+query);
-xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
+xhr.setRequestHeader("X-RapidAPI-Key", "API_KEY");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 
 xhr.send();
@@ -78,7 +78,7 @@ function getResult(){
   var hotelLocationId=sessionStorage.getItem("hotelLocationId");
   let xhr=new XMLHttpRequest();
   xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id="+cityLocationId);
-xhr.setRequestHeader("X-RapidAPI-Key", "5d2130cd4amsh84a157c644302fdp1292fcjsn1ef456755a06");
+xhr.setRequestHeader("X-RapidAPI-Key", "API_KEY");
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
 xhr.send();
 xhr.onreadystatechange=()=>{
